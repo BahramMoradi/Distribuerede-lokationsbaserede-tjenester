@@ -1,0 +1,263 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html;
+      charset=windows-1252">
+    <title>Send locations record to remote system</title>
+    <link rel="stylesheet" type="text/css" href="../style.css">
+  </head>
+  <body>
+    <h1>UC-4: Send locations record to remote system.<br>
+    </h1>
+    <p><font size="+2"><a href="../../index.jsp">Go to index</a><br>
+      </font></p>
+    <p><span style="font-weight: bold;">Author: Bahram Moradi</span><span
+        style="font-style: italic; color: rgb(255, 0, 0);"><br>
+      </span></p>
+    <hr style="width: 100%; height: 2px;">
+    <table style="text-align: left; width: 100%;" border="1"
+      cellpadding="2" cellspacing="0">
+      <tbody>
+        <tr>
+          <td style="vertical-align: top; font-weight: bold;
+            background-color: rgb(204, 204, 204);" rowspan="2"
+            colspan="1">Version<br>
+          </td>
+          <td style="vertical-align: top; background-color: rgb(204,
+            204, 204); font-weight: bold;">Version<br>
+          </td>
+          <td style="vertical-align: top; background-color: rgb(204,
+            204, 204); font-weight: bold;">Issue Date<br>
+          </td>
+          <td style="vertical-align: top; background-color: rgb(204,
+            204, 204); font-weight: bold;">Author<br>
+          </td>
+          <td style="vertical-align: top; background-color: rgb(204,
+            204, 204); font-weight: bold;">Changes<br>
+          </td>
+        </tr>
+        <tr>
+          <td style="vertical-align: top;">1.0<br>
+          </td>
+          <td style="vertical-align: top;">10-12-2015<br>
+          </td>
+          <td style="vertical-align: top;">BM<br>
+          </td>
+          <td style="vertical-align: top;"><br>
+          </td>
+        </tr>
+        <tr>
+          <td style="vertical-align: top; font-weight: bold;
+            background-color: rgb(204, 204, 204);">Scope &amp; Level<br>
+          </td>
+          <td style="vertical-align: top;" rowspan="1" colspan="4">User
+            route<br>
+          </td>
+        </tr>
+        <tr>
+          <td style="vertical-align: top; font-weight: bold;
+            background-color: rgb(204, 204, 204);">Goal in context<br>
+          </td>
+          <td style="vertical-align: top;" rowspan="1" colspan="4">Sending
+            locations data to sever<br>
+          </td>
+        </tr>
+        <tr>
+          <td style="vertical-align: top; font-weight: bold;
+            background-color: rgb(204, 204, 204);">Preconditions<br>
+          </td>
+          <td style="vertical-align: top;" rowspan="1" colspan="4"><br>
+          </td>
+        </tr>
+        <tr>
+          <td style="vertical-align: top; font-weight: bold;
+            background-color: rgb(204, 204, 204);">Successful outcome<br>
+          </td>
+          <td style="vertical-align: top;" rowspan="1" colspan="4">Application
+            obtain users location and send it to the server<br>
+          </td>
+        </tr>
+        <tr>
+          <td style="vertical-align: top; font-weight: bold;
+            background-color: rgb(204, 204, 204);" rowspan="2"
+            colspan="1">Failure Outcomes<br>
+          </td>
+          <td style="vertical-align: top; background-color: rgb(204,
+            204, 204); font-weight: bold;">Failure<br>
+          </td>
+          <td style="vertical-align: top; background-color: rgb(204,
+            204, 204); font-weight: bold;">Outcome<br>
+          </td>
+          <td style="vertical-align: top; background-color: rgb(204,
+            204, 204); font-weight: bold;" rowspan="1" colspan="2">Condition
+leading
+
+
+
+
+            to outcome<br>
+          </td>
+        </tr>
+        <tr>
+          <td style="vertical-align: top;"><br>
+          </td>
+          <td style="vertical-align: top;"><br>
+          </td>
+          <td style="vertical-align: top;" rowspan="1" colspan="2"><br>
+          </td>
+        </tr>
+        <tr>
+          <td style="vertical-align: top; font-weight: bold;
+            background-color: rgb(204, 204, 204);">Primary actor<br>
+          </td>
+          <td style="vertical-align: top;" rowspan="1" colspan="4">User<br>
+          </td>
+        </tr>
+        <tr>
+          <td style="vertical-align: top; font-weight: bold;
+            background-color: rgb(204, 204, 204);">Secondary actors<br>
+          </td>
+          <td style="vertical-align: top;" rowspan="1" colspan="4">Application<br>
+          </td>
+        </tr>
+        <tr>
+          <td style="vertical-align: top; font-weight: bold;
+            background-color: rgb(204, 204, 204);">Main scenario<br>
+          </td>
+          <td style="vertical-align: top;" rowspan="1" colspan="4">
+            <ol>
+              <li>User start the application and navigate to record
+                route.</li>
+              <li>following items are presented in the Record route.</li>
+              <ol>
+                <li>Record button.</li>
+                <li>Google map.</li>
+              </ol>
+              <li>User click on Record button.</li>
+              <li>Application records user location in the defined
+                interval in Settings activity .</li>
+              <li>Application stores the user location in the local
+                database.</li>
+              <li>Application sends user location to remote service as
+                bulk data with fixed interval defined by user in the
+                settings Activity.</li>
+              <li>Remote service sends acknowledgement to the
+                application.</li>
+              <li>Application remove the send data from local database</li>
+            </ol>
+          </td>
+        </tr>
+        <tr>
+          <td style="vertical-align: top; font-weight: bold;
+            background-color: rgb(204, 204, 204);">Alternatives<br>
+          </td>
+          <td style="vertical-align: top;" rowspan="1" colspan="4"><br>
+          </td>
+        </tr>
+        <tr>
+          <td style="vertical-align: top; font-weight: bold;
+            background-color: rgb(204, 204, 204);">Variations<br>
+          </td>
+          <td style="vertical-align: top;" rowspan="1" colspan="4"><br>
+          </td>
+        </tr>
+        <tr>
+          <td style="vertical-align: top; font-weight: bold;
+            background-color: rgb(204, 204, 204);">Related information<br>
+          </td>
+          <td style="vertical-align: top;" rowspan="1" colspan="4">Recording
+            of&nbsp; user location is performed by a service and sending
+            data to remote service is done by an other service. <br>
+          </td>
+        </tr>
+        <tr>
+          <td style="vertical-align: top; font-weight: bold;
+            background-color: rgb(204, 204, 204);">Issues<br>
+          </td>
+          <td style="vertical-align: top;" rowspan="1" colspan="4"><br>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <h2>Scenarios</h2>
+    <h3>Scenario <span style="color: rgb(255, 0, 0);">&lt;#&gt;</span></h3>
+    <span style="font-style: italic; color: rgb(255, 0, 0);">Repeat this
+      section as needed</span><br>
+    <table style="text-align: left; width: 100%;" border="1"
+      cellpadding="2" cellspacing="0">
+      <tbody>
+        <tr>
+          <td style="vertical-align: top; font-weight: bold;
+            background-color: rgb(204, 204, 204);" rowspan="2"
+            colspan="1">Version<br>
+          </td>
+          <td style="vertical-align: top; font-weight: bold;
+            background-color: rgb(204, 204, 204);">Version<br>
+          </td>
+          <td style="vertical-align: top; font-weight: bold;
+            background-color: rgb(204, 204, 204);">Date<br>
+          </td>
+          <td style="vertical-align: top; font-weight: bold;
+            background-color: rgb(204, 204, 204);">Author<br>
+          </td>
+          <td style="vertical-align: top; font-weight: bold;
+            background-color: rgb(204, 204, 204);">Changes<br>
+          </td>
+        </tr>
+        <tr>
+          <td style="vertical-align: top;"><br>
+          </td>
+          <td style="vertical-align: top;"><br>
+          </td>
+          <td style="vertical-align: top;"><br>
+          </td>
+          <td style="vertical-align: top;"><br>
+          </td>
+        </tr>
+        <tr>
+          <td style="vertical-align: top; font-weight: bold;
+            background-color: rgb(204, 204, 204);">Termination outcome<br>
+          </td>
+          <td style="vertical-align: top;" rowspan="1" colspan="4"><br>
+          </td>
+        </tr>
+        <tr>
+          <td style="vertical-align: top; font-weight: bold;
+            background-color: rgb(204, 204, 204);">Scenario summary<br>
+          </td>
+          <td style="vertical-align: top;" rowspan="1" colspan="4"><span
+              style="font-style: italic; color: rgb(255, 0, 0);">If the
+              scenario is long and complex, include a summary.
+              Otherwise, delete this line</span><br>
+          </td>
+        </tr>
+        <tr>
+          <td style="vertical-align: top; font-weight: bold;
+            background-color: rgb(204, 204, 204);">Scenario notes<br>
+          </td>
+          <td style="vertical-align: top;" rowspan="1" colspan="4"><br>
+          </td>
+        </tr>
+        <tr>
+          <td style="vertical-align: top; font-weight: bold;
+            background-color: rgb(204, 204, 204);">Scenario description<br>
+          </td>
+          <td style="vertical-align: top;" rowspan="1" colspan="4"><br>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <h2>Reference links</h2>
+    <ul>
+      <li><span style="font-style: italic; color: rgb(255, 0, 0);">Links,
+if
+
+
+
+
+          any</span></li>
+    </ul>
+    <br>
+    <br>
+  </body>
+</html>

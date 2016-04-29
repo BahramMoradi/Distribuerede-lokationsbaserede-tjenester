@@ -1,0 +1,124 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/1999/REC-html401-19991224/strict.dtd">
+<html>
+<head>
+<META http-equiv=Content-Type content="text/html; charset=UTF-8">
+<title>Exported from Notepad++</title>
+<style type="text/css">
+.center {
+    margin: auto;
+    border: 3px solid #0000FF;
+    width: 60%;
+    padding: 10px;
+    white-space: pre;
+    line-height: 1; 
+    background: #FFFFFF;
+}
+span {
+	font-family: 'Courier New';
+	font-size: 10pt;
+	color: #000000;
+}
+.sc0 {
+}
+.sc1 {
+	color: #008000;
+}
+.sc3 {
+	color: #008080;
+}
+.sc5 {
+	font-weight: bold;
+	color: #0000FF;
+}
+.sc6 {
+	color: #808080;
+}
+.sc10 {
+	font-weight: bold;
+	color: #000080;
+}
+.sc11 {
+}
+.sc16 {
+	color: #8000FF;
+}
+.sc18 {
+	color: #008080;
+}
+</style>
+</head>
+<body >
+<div class="center">
+<span class="sc1">/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */</span><span class="sc0">
+</span><span class="sc16">package</span><span class="sc0"> </span><span class="sc11">dk</span><span class="sc10">.</span><span class="sc11">dtu</span><span class="sc10">.</span><span class="sc11">locationservice</span><span class="sc10">.</span><span class="sc11">iresource</span><span class="sc10">;</span><span class="sc0">
+</span><span class="sc5">import</span><span class="sc0"> </span><span class="sc11">dk</span><span class="sc10">.</span><span class="sc11">dtu</span><span class="sc10">.</span><span class="sc11">locationservice</span><span class="sc10">.</span><span class="sc11">dto</span><span class="sc10">.</span><span class="sc11">User</span><span class="sc10">;</span><span class="sc0">
+</span><span class="sc5">import</span><span class="sc0"> </span><span class="sc11">javax</span><span class="sc10">.</span><span class="sc11">ws</span><span class="sc10">.</span><span class="sc11">rs</span><span class="sc10">.</span><span class="sc11">Consumes</span><span class="sc10">;</span><span class="sc0">
+</span><span class="sc5">import</span><span class="sc0"> </span><span class="sc11">javax</span><span class="sc10">.</span><span class="sc11">ws</span><span class="sc10">.</span><span class="sc11">rs</span><span class="sc10">.</span><span class="sc11">DELETE</span><span class="sc10">;</span><span class="sc0">
+</span><span class="sc5">import</span><span class="sc0"> </span><span class="sc11">javax</span><span class="sc10">.</span><span class="sc11">ws</span><span class="sc10">.</span><span class="sc11">rs</span><span class="sc10">.</span><span class="sc11">GET</span><span class="sc10">;</span><span class="sc0">
+</span><span class="sc5">import</span><span class="sc0"> </span><span class="sc11">javax</span><span class="sc10">.</span><span class="sc11">ws</span><span class="sc10">.</span><span class="sc11">rs</span><span class="sc10">.</span><span class="sc11">POST</span><span class="sc10">;</span><span class="sc0">
+</span><span class="sc5">import</span><span class="sc0"> </span><span class="sc11">javax</span><span class="sc10">.</span><span class="sc11">ws</span><span class="sc10">.</span><span class="sc11">rs</span><span class="sc10">.</span><span class="sc11">PUT</span><span class="sc10">;</span><span class="sc0">
+</span><span class="sc5">import</span><span class="sc0"> </span><span class="sc11">javax</span><span class="sc10">.</span><span class="sc11">ws</span><span class="sc10">.</span><span class="sc11">rs</span><span class="sc10">.</span><span class="sc11">Path</span><span class="sc10">;</span><span class="sc0">
+</span><span class="sc5">import</span><span class="sc0"> </span><span class="sc11">javax</span><span class="sc10">.</span><span class="sc11">ws</span><span class="sc10">.</span><span class="sc11">rs</span><span class="sc10">.</span><span class="sc11">PathParam</span><span class="sc10">;</span><span class="sc0">
+</span><span class="sc5">import</span><span class="sc0"> </span><span class="sc11">javax</span><span class="sc10">.</span><span class="sc11">ws</span><span class="sc10">.</span><span class="sc11">rs</span><span class="sc10">.</span><span class="sc11">Produces</span><span class="sc10">;</span><span class="sc0">
+</span><span class="sc5">import</span><span class="sc0"> </span><span class="sc11">javax</span><span class="sc10">.</span><span class="sc11">ws</span><span class="sc10">.</span><span class="sc11">rs</span><span class="sc10">.</span><span class="sc11">core</span><span class="sc10">.</span><span class="sc11">MediaType</span><span class="sc10">;</span><span class="sc0">
+</span><span class="sc5">import</span><span class="sc0"> </span><span class="sc11">javax</span><span class="sc10">.</span><span class="sc11">ws</span><span class="sc10">.</span><span class="sc11">rs</span><span class="sc10">.</span><span class="sc11">core</span><span class="sc10">.</span><span class="sc11">Response</span><span class="sc10">;</span><span class="sc0">
+
+</span><span class="sc3">/**
+ * Root resource class for users
+ * </span><span class="sc18">@author</span><span class="sc3"> Bahram Moradi
+ */</span><span class="sc0">
+</span><span class="sc11">@Path</span><span class="sc10">(</span><span class="sc6">"users"</span><span class="sc10">)</span><span class="sc0">
+</span><span class="sc16">public</span><span class="sc0"> </span><span class="sc16">interface</span><span class="sc0"> </span><span class="sc11">IUserResource</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0">
+    
+    </span><span class="sc3">/**
+     * This method find a user by id and return it to caller.
+     * It is used for test
+     *
+     * </span><span class="sc18">@param</span><span class="sc3"> uid : id of the user
+     * </span><span class="sc18">@return</span><span class="sc3">
+     */</span><span class="sc0">
+    </span><span class="sc11">@GET</span><span class="sc0">
+    </span><span class="sc11">@Path</span><span class="sc10">(</span><span class="sc6">"/{uid}"</span><span class="sc10">)</span><span class="sc0">
+    </span><span class="sc11">@Produces</span><span class="sc10">(</span><span class="sc6">"application/json"</span><span class="sc10">)</span><span class="sc0">
+    </span><span class="sc16">public</span><span class="sc0"> </span><span class="sc11">Response</span><span class="sc0"> </span><span class="sc11">getUser</span><span class="sc10">(</span><span class="sc11">@PathParam</span><span class="sc10">(</span><span class="sc6">"uid"</span><span class="sc10">)</span><span class="sc0"> </span><span class="sc16">long</span><span class="sc0"> </span><span class="sc11">uid</span><span class="sc10">);</span><span class="sc0">
+
+    </span><span class="sc3">/**
+     * PUT is used to update a resource. PUT is idempotent but not safe.
+     *
+     * </span><span class="sc18">@param</span><span class="sc3"> user
+     * </span><span class="sc18">@return</span><span class="sc3">
+     */</span><span class="sc0">
+    </span><span class="sc11">@PUT</span><span class="sc0">
+    </span><span class="sc11">@Consumes</span><span class="sc10">(</span><span class="sc11">MediaType</span><span class="sc10">.</span><span class="sc11">APPLICATION_JSON</span><span class="sc10">)</span><span class="sc0">
+    </span><span class="sc16">public</span><span class="sc0"> </span><span class="sc11">Response</span><span class="sc0"> </span><span class="sc11">updateUser</span><span class="sc10">(</span><span class="sc11">User</span><span class="sc0"> </span><span class="sc11">user</span><span class="sc10">);</span><span class="sc0">
+
+    </span><span class="sc3">/**
+     * This method delete a user by id
+     *
+     * </span><span class="sc18">@param</span><span class="sc3"> uid : id of the user
+     * </span><span class="sc18">@return</span><span class="sc3">
+     */</span><span class="sc0">
+    </span><span class="sc11">@DELETE</span><span class="sc0">
+    </span><span class="sc11">@Path</span><span class="sc10">(</span><span class="sc6">"/{uid}"</span><span class="sc10">)</span><span class="sc0">
+    </span><span class="sc16">public</span><span class="sc0"> </span><span class="sc11">Response</span><span class="sc0"> </span><span class="sc11">deleteUser</span><span class="sc10">(</span><span class="sc11">@PathParam</span><span class="sc10">(</span><span class="sc6">"uid"</span><span class="sc10">)</span><span class="sc0"> </span><span class="sc16">long</span><span class="sc0"> </span><span class="sc11">uid</span><span class="sc10">);</span><span class="sc0">
+
+    </span><span class="sc3">/**
+     * This method is for creating a user in database
+     *
+     * </span><span class="sc18">@param</span><span class="sc3"> user : The user to be created
+     * </span><span class="sc18">@return</span><span class="sc3">
+     */</span><span class="sc0">
+    </span><span class="sc11">@POST</span><span class="sc0">
+    </span><span class="sc11">@Produces</span><span class="sc10">(</span><span class="sc11">value</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc11">MediaType</span><span class="sc10">.</span><span class="sc11">APPLICATION_JSON</span><span class="sc10">)</span><span class="sc0">
+    </span><span class="sc11">@Consumes</span><span class="sc10">(</span><span class="sc11">value</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc11">MediaType</span><span class="sc10">.</span><span class="sc11">APPLICATION_JSON</span><span class="sc10">)</span><span class="sc0">
+    </span><span class="sc16">public</span><span class="sc0"> </span><span class="sc11">Response</span><span class="sc0"> </span><span class="sc11">createUser</span><span class="sc10">(</span><span class="sc11">User</span><span class="sc0"> </span><span class="sc11">user</span><span class="sc10">);</span><span class="sc0">
+
+  
+    
+</span><span class="sc10">}</span><span class="sc0">
+</span></div></body>
+</html>
